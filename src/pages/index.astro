@@ -1,0 +1,22 @@
+---
+import { Hero } from "@modules/Hero";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="CHANGEME" description="YOUR META DESCRIPTION FOR SEO">
+    <main class="page-content">
+        <Hero
+            heroType="textImage"
+            client:load
+            data={{
+                title: `This is astro starter`,
+                image: {
+                    srcLocal: "heroImg",
+                    alt: "hero section image",
+                    width: 300,
+                    height: 300,
+                },
+            }}
+        />
+    </main>
+</Layout>
