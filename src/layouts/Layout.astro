@@ -5,10 +5,9 @@ import { PreviewPng } from "@static/images";
 import { Header } from "@modules/Header";
 
 import MetaConfig from "./MetaConfig.astro";
-
-// tailwind-output uncomment if you need to use tailwind
-import TailwindOutput from "../styles/tailwind/tailwind.output.css";
 import { Footer } from "@modules/Footer";
+
+import "@styles/tailwind/tailwind.output.css";
 
 interface Props {
     title: string;
@@ -29,7 +28,6 @@ const { title, description, overwritePreview } = Astro.props;
         />
         <title>{title}</title>
         <Global styles={NormalizeCSS} />
-        <Global styles={TailwindOutput} />
     </head>
     <body class="bg-secondary">
         <Header />
