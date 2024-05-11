@@ -1,10 +1,7 @@
-import { useState, type FC } from "react";
+import { type FC } from "react";
 import { Button } from "@components/Button";
 
 export const Navigation: FC = () => {
-    // to update values for all components, keep the state here
-    const [isOpen, setIsOpen] = useState(false);
-
     return (
         <nav className="md:flex  md:grow">
             {/* Desktop sign in links */}

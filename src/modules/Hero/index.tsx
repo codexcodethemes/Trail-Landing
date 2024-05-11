@@ -1,5 +1,5 @@
 import { type FC } from "react";
-import * as S from "./styled";
+
 import {
     CenterText,
     type CenterTextProps,
@@ -36,16 +36,7 @@ export const Hero: FC<HeroProps> = ({ heroType, data, ...rest }) => {
             break;
     }
 
-    /**
-     * if any of hero types need to be full width,  make check here with boolean
-     * like:
-     * const isFullWidth = heroType === "center" ? true : false;
-     */
-    const isFullWidth = false;
-
     return (
-        <S.HeroWrapper $isFullWidth={isFullWidth}>
-            {HeroTypeOutput}
-        </S.HeroWrapper>
+        <div className="flex items-center justify-center">{HeroTypeOutput}</div>
     );
 };

@@ -25,7 +25,7 @@ export const CenterText: FC<CenterTextProps> = ({
     }
 
     return (
-        <div className="relative mt-32  md:mt-40 md:mb-16">
+        <div className="mt-32 md:mt-40 md:mb-16">
             <Container>
                 <div className="text-center flex justify-center flex-col items-center gap-5">
                     <h1 className="text-h1 md:text-h1-md lg:text-h1-lg font-bold opacity-90">

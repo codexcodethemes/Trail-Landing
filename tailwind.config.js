@@ -4,6 +4,15 @@ const Colors = require("./src/styles/colors").Colors;
 module.exports = {
     content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
     theme: {
+        screens: {
+            base: "0px",
+            sm: "576px",
+            md: "768px",
+            lg: "992px",
+            xl: "1200px",
+            xxl: "1440px",
+            xxxl: "1920px",
+        },
         extend: {
             colors: {
                 primary: Colors.primary,

@@ -73,6 +73,9 @@ export const Button: FC<ButtonProps> = ({
             break;
     }
 
+    /**
+     * button can be rendered as a link or as a button
+     */
     return (
         <S.ButtonWrapper $align={align}>
             <ButtonComponent
