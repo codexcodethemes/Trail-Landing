@@ -1,3 +1,4 @@
+import { Image } from "@static/images";
 import type { FC } from "react";
 /**
  * Logo is a text but if there is need to use img, add two img from <Image component
@@ -13,7 +14,7 @@ export const Logo: FC = () => {
         <div className="shrink-0 mr-4">
             {/* Logo */}
             <a href="/" className="block" aria-label="logo">
-                Logo
+                <Image srcLocal="logo" alt="logo" />
             </a>
         </div>
     );

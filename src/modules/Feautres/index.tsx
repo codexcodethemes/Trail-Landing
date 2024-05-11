@@ -25,7 +25,8 @@ export const Features: FC<FeaturesProps> = ({ data: { features } }) => {
                     {features.map((item, index) => (
                         <div
                             key={index}
-                            className="relative flex flex-col items-center"
+                            className="relative flex flex-col items-center "
+                            data-animate
                         >
                             <figure className="bg-tertiary p-5 rounded-full mb-3">
                                 <Icon

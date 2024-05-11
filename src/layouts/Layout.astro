@@ -31,16 +31,36 @@ const { title, description, overwritePreview } = Astro.props;
         <Global styles={TailwindOutput} />
     </head>
     <body class="bg-secondary">
-        <Header client:load />
+        <Header />
         <slot />
-        <Footer client:visible />
+        <Footer />
 
-        <style is:global>
-            /* Improve Page speed */
-            /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
-            img {
-                content-visibility: auto;
-            }
-        </style>
+        <script>
+            // Get all Elements with data-animate attribute & animate  them on scroll
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll("[data-animate]");
+                if (elements.length === 0) return;
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                // set atricle to fade-in
+                                entry.target.classList.add("animate-fade-in");
+                            }
+                        });
+                    },
+                    {
+                        threshold: 0.5,
+                    }
+                );
+
+                elements.forEach((element) => {
+                    observer.observe(element);
+                });
+            };
+            window.addEventListener("scroll", animateOnScroll);
+            // load script on load
+            window.addEventListener("load", animateOnScroll);
+        </script>
     </body>
 </html>

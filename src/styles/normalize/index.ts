@@ -1,7 +1,6 @@
 import { css } from "@emotion/react";
 import { Theme, ThemeVar } from "@styles/colors";
 import { FontFace, Fonts } from "@styles/fonts";
-import { MediaQuery } from "@styles/mediaQuery";
 
 export const NormalizeCSS = css`
     ${FontFace};
@@ -16,7 +15,7 @@ export const NormalizeCSS = css`
         font-family: ${Fonts.primary};
         font-weight: 400;
         font-size: 16px;
-        line-height: 1.5;
+        line-height: 1.2;
     }
 
     * {
@@ -32,7 +31,6 @@ export const NormalizeCSS = css`
         margin: 0;
 
         color: ${Theme.primary};
-        background: ${Theme.primary};
 
         &::-webkit-scrollbar {
             width: 17px;
@@ -44,7 +42,7 @@ export const NormalizeCSS = css`
         }
 
         &::-webkit-scrollbar-thumb {
-            background-color: #ee82ee5c;
+            background-color: #1b4273;
         }
     }
 
@@ -109,5 +107,16 @@ export const NormalizeCSS = css`
     a {
         text-decoration: none;
         color: inherit;
+    }
+
+    [data-animate] {
+        transform: translateY(50px);
+        opacity: 0.001;
+        transition: opacity 0.5s, transform 0.5s;
+
+        &.animate-fade-in {
+            transform: translateY(0);
+            opacity: 1;
+        }
     }
 `;

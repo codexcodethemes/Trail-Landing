@@ -16,7 +16,7 @@ export const SectionHeadings: FC<SectionHeadingsProps> = ({
     data: { label, title, description, showLine },
 }) => {
     return (
-        <section className="mt-20 mb-20">
+        <section className="mt-20 mb-20" data-animate>
             <Container>
                 <div
                     className={`flex justify-center flex-col items-center text-center pt-20 ${

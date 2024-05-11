@@ -26,7 +26,7 @@ export const ImageContent: FC<ImageContentProps> = ({
     }
 
     return (
-        <section className="mt-20 mb-40">
+        <section className="mt-20 mb-40" data-animate>
             <Container>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
                     <div

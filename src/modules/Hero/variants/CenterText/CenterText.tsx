@@ -27,7 +27,10 @@ export const CenterText: FC<CenterTextProps> = ({
     return (
         <div className="mt-32 md:mt-40 md:mb-16">
             <Container>
-                <div className="text-center flex justify-center flex-col items-center gap-5">
+                <div
+                    className="text-center flex justify-center flex-col items-center gap-5"
+                    data-animate
+                >
                     <h1 className="text-h1 md:text-h1-md lg:text-h1-lg font-bold opacity-90">
                         {title}
                     </h1>

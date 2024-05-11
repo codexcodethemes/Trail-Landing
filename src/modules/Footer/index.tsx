@@ -5,11 +5,14 @@ import { Container } from "@components/Container";
 
 export const Footer: FC = () => {
     return (
-        <footer className="py-12 md:py-16 border-t border-tertiary border-opacity-50">
+        <footer
+            className="py-12 md:py-16 border-t border-tertiary border-opacity-50"
+            data-animate
+        >
             <Container>
                 <S.FooterCols>
                     <div className="max-w-md">
-                        <div className="mb-2">
+                        <div className="mb-3">
                             <Logo />
                         </div>
                         <p className="text-primary opacity-50">

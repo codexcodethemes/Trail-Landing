@@ -12,7 +12,7 @@ export type TestimonialsProps = {
 
 export const Testimonials: FC<TestimonialsProps> = ({ data }) => {
     return (
-        <section className="mt-20 mb-40 ">
+        <section className="mt-20 mb-40" data-animate>
             <Container>
                 <div className="grid gap-8 lg:grid-cols-3 items-start">
                     {data.map((testimonial, index) => (
