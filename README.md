@@ -1,4 +1,4 @@
-# 🚀 CODEXCODE ASTRO STARTER
+# 🚀 Trail Landing Page with Tailwind
 
 ![Agency Aestro Template Page](/src/static/images/preview.webp)
 [<img src="/src/static/images/link-live.png">](https://www.codexcode.store/)
@@ -56,20 +56,6 @@ SITEMAP: Sitemap is created by astro, but you need yo configure it a little bit
 1. Go to astro.config.mjs
 2. check how sitemap data is added (when you need more customization, check the commented lines)
 
-## 📞 Contact Form
-
-If project contains Contact form
-
-For contact form you need to replace those ID with the correct one.
-API: https://emailjs.com
-Other solution: If you want to add other solution, then change axios request with other solution - should work
-
-```
-    service_id: "service_ID",
-    template_id: "template_TEMPLATE_ID",
-    user_id: "USER_ID",
-```
-
 ## 🚀 Styles
 
 All global styles like, colors, fonts, normalize or things like mediaQuery are stored in styles folder,
@@ -103,17 +89,13 @@ All colors are used as css var to have easier access in app
 
 ## ⚠️ Tailwind
 
-This project have basic setup with Tailwind - if you like to use it, you can^^
-
-search for ⚠️ tailwind-output ⚠️ & un-comment those lines & add config in tailwind.config.js
+This project is made with Tailwind - but you can use @emotions if you need css files
 
 if you need to generate again file use this:
 
 ```
 npx tailwindcss -i ./src/styles/tailwind/tailwind.css -o ./src/styles/tailwind/tailwind.output.css --watch
 ```
-
-delete --watch if you dont need to watch you'r css files all time
 
 ## 🧞 Commands
 
