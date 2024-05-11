@@ -3,11 +3,12 @@ import { NormalizeCSS } from "@styles/normalize";
 import { Global } from "@emotion/react";
 import { PreviewPng } from "@static/images";
 import { Header } from "@modules/Header";
-import { Footer } from "@modules/Footer";
+
 import MetaConfig from "./MetaConfig.astro";
 
 // tailwind-output uncomment if you need to use tailwind
 import TailwindOutput from "../styles/tailwind/tailwind.output.css";
+import { Footer } from "@modules/Footer";
 
 interface Props {
     title: string;

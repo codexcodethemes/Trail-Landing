@@ -2,11 +2,13 @@ import { type FC } from "react";
 import PreviewPng from "./preview.webp";
 import HeroImg from "./hero-img.webp";
 import Logo from "./logo.webp";
+import Dashboard from "./dashboard.webp";
 
 export const images = {
     preview: PreviewPng,
     heroImg: HeroImg,
     logo: Logo,
+    dashboard: Dashboard,
 };
 
 export type ImageProps = {

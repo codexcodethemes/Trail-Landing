@@ -1,12 +1,16 @@
 import { type FC } from "react";
 
-import IconFacebook from "./icon-facebook.svg";
+import IconReact from "./icon-react.svg";
+import IconChecked from "./icon-checked.svg";
+import IconTestimonial from "./icon-testimonial.svg";
 
 export const icons = {
-    facebook: IconFacebook,
+    checked: IconChecked,
+    testimonial: IconTestimonial,
+    react: IconReact,
 };
 
-type IconName = {
+export type IconName = {
     iconData: keyof typeof icons;
     alt: string;
 };

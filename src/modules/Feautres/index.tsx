@@ -1,11 +1,11 @@
 import { Container } from "@components/Container";
-import { Icon } from "@static/icons";
+import { Icon, type IconName } from "@static/icons";
 import { type FC } from "react";
 
 export type FeaturesProps = {
     data: {
         features: {
-            icon: any;
+            icon: IconName["iconData"];
             text: string;
             description: string;
         }[];
@@ -28,11 +28,11 @@ export const Features: FC<FeaturesProps> = ({ data: { features } }) => {
                             className="relative flex flex-col items-center "
                             data-animate
                         >
-                            <figure className="bg-tertiary p-5 rounded-full mb-3">
+                            <figure className="bg-tertiary py-6  px-5 rounded-full mb-3">
                                 <Icon
-                                    iconData="facebook"
+                                    iconData={item.icon}
                                     alt="icon"
-                                    className="h-4 object-contain"
+                                    className="h-10 object-contain"
                                 />
                             </figure>
                             <h3 className="text-h4 mb-2">{item.text}</h3>

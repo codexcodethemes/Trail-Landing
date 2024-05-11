@@ -1,5 +1,6 @@
 import { Container } from "@components/Container";
-import { Image } from "@static/images";
+import { Icon } from "@static/icons";
+import { Image, type ImageProps } from "@static/images";
 import { type FC } from "react";
 
 export type ImageContentProps = {
@@ -8,7 +9,7 @@ export type ImageContentProps = {
         aboveTitle: string;
         title: string;
         description: string;
-        image: string;
+        image: ImageProps["srcLocal"];
         features?: {
             text: string;
         }[];
@@ -36,7 +37,7 @@ export const ImageContent: FC<ImageContentProps> = ({
                                 : "md:order-2"
                         }`}
                     >
-                        <Image srcLocal="heroImg" alt="hero image" />
+                        <Image srcLocal={image} alt="hero image" />
                     </div>
 
                     <div
@@ -60,14 +61,13 @@ export const ImageContent: FC<ImageContentProps> = ({
                                         className="flex items-center mb-2"
                                         key={index}
                                     >
-                                        <svg
-                                            className="w-3 h-3 fill-current text-tertiary mr-2 shrink-0"
-                                            viewBox="0 0 12 12"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                            <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
-                                        </svg>
-                                        <span>{feature.text}</span>
+                                        <Icon
+                                            iconData="checked"
+                                            alt="list item checked"
+                                        />
+                                        <span className="ml-3">
+                                            {feature.text}
+                                        </span>
                                     </li>
                                 ))}
                             </ul>

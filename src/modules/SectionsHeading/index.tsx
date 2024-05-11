@@ -1,6 +1,4 @@
-import { Button } from "@components/Button";
 import { Container } from "@components/Container";
-import { Image } from "@static/images";
 import { type FC } from "react";
 
 export type SectionHeadingsProps = {
@@ -15,6 +13,11 @@ export type SectionHeadingsProps = {
 export const SectionHeadings: FC<SectionHeadingsProps> = ({
     data: { label, title, description, showLine },
 }) => {
+    // Do not render if there are no elements
+    if (!title && !description) {
+        return null;
+    }
+
     return (
         <section className="mt-20 mb-20" data-animate>
             <Container>

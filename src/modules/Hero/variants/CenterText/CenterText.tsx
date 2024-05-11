@@ -1,6 +1,6 @@
 import { Button } from "@components/Button";
 import { Container } from "@components/Container";
-import { Image } from "@static/images";
+import { Image, type ImageProps } from "@static/images";
 import { type FC } from "react";
 
 export type CenterTextProps = {
@@ -11,16 +11,17 @@ export type CenterTextProps = {
         link: string;
         variant: "primary" | "secondary" | "tertiary";
     }[];
-    image?: string;
+    image: ImageProps["srcLocal"];
 };
 
 export const CenterText: FC<CenterTextProps> = ({
     title,
     description,
     buttons,
+    image,
 }) => {
-    // do not render if there are no elements
-    if (!buttons || buttons.length === 0) {
+    // Do not render if there are no elements
+    if (!title && !image) {
         return null;
     }
 
@@ -34,22 +35,26 @@ export const CenterText: FC<CenterTextProps> = ({
                     <h1 className="text-h1-md md:text-h1-md lg:text-h1-lg font-bold opacity-90">
                         {title}
                     </h1>
-                    <p className="text-p-md sm:text-p-leading max-w-lg opacity-50 margin-p last:margin-p-last">
-                        {description}
-                    </p>
-                    <div className="max-w-xs mx-auto gap-5 sm:max-w-none flex justify-center flex-col sm:flex-row ">
-                        {buttons.map((button, index) => (
-                            <Button
-                                key={index}
-                                variant={button.variant}
-                                link={button.link}
-                            >
-                                {button.text}
-                            </Button>
-                        ))}
-                    </div>
-                    <figure>
-                        <Image srcLocal="heroImg" alt="hero image"></Image>
+                    {description && (
+                        <p className="text-p-md sm:text-p-leading max-w-lg opacity-50 margin-p last:margin-p-last">
+                            {description}
+                        </p>
+                    )}
+                    {buttons && (
+                        <div className="max-w-xs mx-auto gap-5 sm:max-w-none flex justify-center flex-col sm:flex-row ">
+                            {buttons.map((button, index) => (
+                                <Button
+                                    key={index}
+                                    variant={button.variant}
+                                    link={button.link}
+                                >
+                                    {button.text}
+                                </Button>
+                            ))}
+                        </div>
+                    )}
+                    <figure className="max-w-xl mt-10">
+                        <Image srcLocal={image} alt="hero image"></Image>
                     </figure>
                 </div>
             </Container>
