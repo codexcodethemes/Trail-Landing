@@ -1,6 +1,4 @@
-import * as S from "./styled";
 import type { FC } from "react";
-import { Image } from "@static/images";
 /**
  * Logo is a text but if there is need to use img, add two img from <Image component
  * @import
@@ -12,10 +10,11 @@ import { Image } from "@static/images";
  */
 export const Logo: FC = () => {
     return (
-        <S.LogoStyled>
-            <a href="/">
-                <Image srcLocal="logo" alt="logo" />
+        <div className="shrink-0 mr-4">
+            {/* Logo */}
+            <a href="/" className="block" aria-label="logo">
+                Logo
             </a>
-        </S.LogoStyled>
+        </div>
     );
 };

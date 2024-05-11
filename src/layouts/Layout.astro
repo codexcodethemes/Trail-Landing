@@ -27,11 +27,10 @@ const { title, description, overwritePreview } = Astro.props;
             preview={overwritePreview ? overwritePreview : PreviewPng.src}
         />
         <title>{title}</title>
-
         <Global styles={NormalizeCSS} />
-        <Global styles={{ NormalizeCSS, TailwindOutput }} />
+        <Global styles={TailwindOutput} />
     </head>
-    <body>
+    <body class="bg-secondary">
         <Header client:load />
         <slot />
         <Footer client:visible />

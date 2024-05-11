@@ -2,16 +2,16 @@ import { css } from "@emotion/react";
 
 // use this colors only if necessary - use Theme for colors
 export const Colors = {
-    white: "#FFFFFF",
-    dark: "#101118",
-    darkLighter: "#20222e",
+    primary: "#FFFFFF",
+    secondary: "#19212d",
+    tertiary: "#2872d1",
 };
 
 export const ThemeVar = css`
     :root {
-        --primary: ${Colors.white};
-        --secondary: ${Colors.darkLighter};
-        --tertiary: ${Colors.dark};
+        --primary: ${Colors.primary};
+        --secondary: ${Colors.secondary};
+        --tertiary: ${Colors.tertiary};
     }
 `;
 

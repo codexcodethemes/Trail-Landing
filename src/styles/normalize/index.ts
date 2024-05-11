@@ -31,7 +31,7 @@ export const NormalizeCSS = css`
     body {
         margin: 0;
 
-        color: ${Theme.secondary};
+        color: ${Theme.primary};
         background: ${Theme.primary};
 
         &::-webkit-scrollbar {
