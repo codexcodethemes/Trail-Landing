@@ -82,7 +82,9 @@ export const Button: FC<ButtonProps> = ({
                 href={link}
                 target={target}
                 $variant={variant}
-                className={"p-2 px-4" + " " + classes + " " + alignClasses}
+                className={
+                    "w-full p-2 px-4" + " " + classes + " " + alignClasses
+                }
                 {...rest}
             >
                 {children}

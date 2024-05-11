@@ -11,7 +11,7 @@ export const Navigation: FC = () => {
                 </Button>
 
                 <Button link="/signup" variant="primary">
-                    Singup
+                    Sing up
                 </Button>
             </div>
         </nav>
