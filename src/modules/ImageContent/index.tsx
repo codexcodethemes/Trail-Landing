@@ -51,7 +51,7 @@ export const ImageContent: FC<ImageContentProps> = ({
                                 {aboveTitle}
                             </div>
                             <h3 className="text-h3 mb-3">{title}</h3>
-                            <p className="text-xl text-primary opacity-50 mb-4 max-w-lg">
+                            <p className="text-p-md md:text-xl text-primary opacity-50 mb-4 max-w-lg">
                                 {description}
                             </p>
                             <ul className="text-lg text-primary">

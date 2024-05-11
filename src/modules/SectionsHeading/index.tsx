@@ -30,8 +30,10 @@ export const SectionHeadings: FC<SectionHeadingsProps> = ({
                             {label}
                         </div>
                     )}
-                    <h2 className="text-h2 mb-4 font-bold">{title}</h2>
-                    <p className="text-p-lg text-primary opacity-50 max-w-lg">
+                    <h2 className="text-h2-md md:text-h2  mb-4 font-bold">
+                        {title}
+                    </h2>
+                    <p className="text-p-md sm:text-p-lg text-primary opacity-50 max-w-lg">
                         {description}
                     </p>
                 </div>

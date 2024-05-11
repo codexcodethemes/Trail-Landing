@@ -31,7 +31,7 @@ export const CenterText: FC<CenterTextProps> = ({
                     className="text-center flex justify-center flex-col items-center gap-5"
                     data-animate
                 >
-                    <h1 className="text-h1 md:text-h1-md lg:text-h1-lg font-bold opacity-90">
+                    <h1 className="text-h1-md md:text-h1-md lg:text-h1-lg font-bold opacity-90">
                         {title}
                     </h1>
                     <p className="text-p-md sm:text-p-leading max-w-lg opacity-50 margin-p last:margin-p-last">
