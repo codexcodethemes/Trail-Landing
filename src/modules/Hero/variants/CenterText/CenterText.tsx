@@ -11,7 +11,7 @@ export type CenterTextProps = {
         link: string;
         variant: "primary" | "secondary" | "tertiary";
     }[];
-    image: ImageProps["srcLocal"];
+    image?: ImageProps["srcLocal"];
 };
 
 export const CenterText: FC<CenterTextProps> = ({
@@ -21,7 +21,7 @@ export const CenterText: FC<CenterTextProps> = ({
     image,
 }) => {
     // Do not render if there are no elements
-    if (!title && !image) {
+    if (!title && !description) {
         return null;
     }
 
@@ -53,9 +53,11 @@ export const CenterText: FC<CenterTextProps> = ({
                             ))}
                         </div>
                     )}
-                    <figure className="max-w-xl mt-10">
-                        <Image srcLocal={image} alt="hero image"></Image>
-                    </figure>
+                    {image && (
+                        <figure className="max-w-xl mt-10">
+                            <Image srcLocal={image} alt="hero image"></Image>
+                        </figure>
+                    )}
                 </div>
             </Container>
         </div>

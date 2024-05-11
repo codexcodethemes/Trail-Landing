@@ -11,6 +11,11 @@ export type TestimonialsProps = {
 };
 
 export const Testimonials: FC<TestimonialsProps> = ({ data }) => {
+    // Do not render if there are no elements
+    if (!data.length) {
+        return null;
+    }
+
     return (
         <section className="mt-20 mb-40" data-animate>
             <Container>
