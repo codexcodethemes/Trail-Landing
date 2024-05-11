@@ -3,7 +3,7 @@ import react from "@astrojs/react";
 import CompressionPlugin from "vite-plugin-compression";
 import sitemap from "@astrojs/sitemap";
 
-export const siteUrl = "https://codexcode.store";
+export const siteUrl = "https://trial-landing-tailwind.netlify.app";
 
 const date = new Date().toISOString();
 // https://astro.build/config

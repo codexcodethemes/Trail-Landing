@@ -1,7 +1,7 @@
 # 🚀 Trail Landing Page with Tailwind
 
 ![Agency Aestro Template Page](/src/static/images/preview.webp)
-[<img src="/src/static/images/link-live.png">](https://www.codexcode.store/)
+[<img src="/src/static/images/link-live.png">](https://trial-landing-tailwind.netlify.app)
 [<img src="/src/static/images/link-contact.png">](https://www.codexcode.store/pages/contact)
 
 ## ⚠️ How to keep good performance?
