@@ -1,10 +1,10 @@
 import * as S from "./styled";
 import type { FC } from "react";
 
-type ButtonProps = {
+export type ButtonProps = React.ButtonHTMLAttributes<HTMLElement> & {
     children: any;
     link?: string;
-    variant?: "primary" | "secondary";
+    variant?: "primary" | "secondary" | "tertiary";
     target?: "_blank" | "_self" | "_parent";
     align?: "left" | "center" | "right";
     asButton?: boolean;
@@ -31,10 +31,14 @@ export const Button: FC<ButtonProps> = ({
     const ButtonComponent = asButton ? S.Button : S.ButtonLink;
 
     const primaryClass =
-        "inline-flex items-center justify-center ml-3 border border-transparent rounded-sm leading-snug transition duration-150 ease-in-out text-primary bg-tertiary hover:bg-secondary font-medium";
+        "inline-flex items-center justify-center border border-transparent rounded-sm leading-snug transition duration-150 ease-in-out text-primary bg-tertiary hover:bg-opacity-50 bg-tertiary font-medium";
 
     const secondaryClass =
         "flex items-center px-4 py-3 transition duration-150 ease-in-out text-primary hover:text-tertiary";
+
+    const tertiaryClass =
+        "inline-flex items-center justify-center border border-transparent rounded-sm leading-snug transition duration-150 ease-in-out text-primary bg-tertiary bg-opacity-20 hover:bg-secondary font-medium";
+
     let classes;
 
     switch (variant) {
@@ -43,6 +47,9 @@ export const Button: FC<ButtonProps> = ({
             break;
         case "secondary":
             classes = secondaryClass;
+            break;
+        case "tertiary":
+            classes = tertiaryClass;
             break;
         default:
             classes = primaryClass;
@@ -71,9 +78,9 @@ export const Button: FC<ButtonProps> = ({
             <ButtonComponent
                 href={link}
                 target={target}
-                {...rest}
                 $variant={variant}
                 className={"p-2 px-4" + " " + classes + " " + alignClasses}
+                {...rest}
             >
                 {children}
             </ButtonComponent>

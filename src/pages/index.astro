@@ -1,22 +1,167 @@
 ---
 import { Hero } from "@modules/Hero";
 import Layout from "../layouts/Layout.astro";
+import { Features } from "@modules/Feautres";
+import { ImageContent } from "@modules/ImageContent";
+import { SectionHeadings } from "@modules/SectionsHeading";
+import { Testimonials } from "@modules/Testimonials";
 ---
 
 <Layout title="CHANGEME" description="YOUR META DESCRIPTION FOR SEO">
     <main class="page-content">
         <Hero
-            heroType="textImage"
+            heroType="center"
             client:load
             data={{
-                title: `This is astro starter`,
-                image: {
-                    srcLocal: "heroImg",
-                    alt: "hero section image",
-                    width: 300,
-                    height: 300,
-                },
+                title: `Landing template for startups`,
+                description: `A simple, elegant, and modern landing page template for startups, apps, and products.`,
+                buttons: [
+                    {
+                        text: "Get Started",
+                        link: "/docs/getting-started",
+                        variant: "primary",
+                    },
+                    {
+                        text: "Learn More",
+                        link: "/docs",
+                        variant: "tertiary",
+                    },
+                ],
             }}
+        />
+        <SectionHeadings
+            data={{
+                label: "Section Features",
+                title: "Features",
+                description:
+                    "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            }}
+        />
+        <Features
+            data={{
+                features: [
+                    {
+                        text: "Feature 1",
+                        description:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                        icon: "icon-1",
+                    },
+                    {
+                        text: "Feature 2",
+                        description:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                        icon: "icon-2",
+                    },
+                    {
+                        text: "Feature 3",
+                        description:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                        icon: "icon-3",
+                    },
+                    {
+                        text: "Feature 4",
+                        description:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                        icon: "icon-4",
+                    },
+                    {
+                        text: "Feature 5",
+                        description:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                        icon: "icon-5",
+                    },
+                    {
+                        text: "Feature 6",
+                        description:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                        icon: "icon-6",
+                    },
+                ],
+            }}
+        />
+        <SectionHeadings
+            data={{
+                showLine: true,
+                label: "Content Image",
+                title: "Unlimited solutions",
+                description:
+                    "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            }}
+        />
+        <ImageContent
+            data={{
+                imagePosition: "right",
+                aboveTitle: "About Us",
+                title: "We are a team of professionals",
+                description:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                image: "/images/about.jpg",
+                features: [
+                    { text: "featue1" },
+                    { text: "featue2" },
+                    { text: "featue3" },
+                ],
+            }}
+        />
+        <ImageContent
+            data={{
+                imagePosition: "left",
+                aboveTitle: "About Us",
+                title: "We are a team of professionals",
+                description:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                image: "/images/about.jpg",
+                features: [
+                    { text: "featue1" },
+                    { text: "featue2" },
+                    { text: "featue3" },
+                ],
+            }}
+        />
+        <ImageContent
+            data={{
+                imagePosition: "right",
+                aboveTitle: "About Us",
+                title: "We are a team of professionals",
+                description:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                image: "/images/about.jpg",
+                features: [
+                    { text: "featue1" },
+                    { text: "featue2" },
+                    { text: "featue3" },
+                ],
+            }}
+        />
+        <SectionHeadings
+            data={{
+                showLine: true,
+                title: "Trusted by",
+                description:
+                    "Cient's around the world trust us to deliver fast, reliable, and secure services for their business.",
+            }}
+        />
+        <Testimonials
+            data={[
+                {
+                    authorName: "John Doe",
+                    authorRole: "CEO",
+                    content:
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                },
+                {
+                    authorName: "Jane Doe",
+                    authorRole: "CEO",
+                    content:
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                },
+                {
+                    authorName: "John Doe",
+                    authorRole: "CEO",
+                    content:
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                },
+            ]}
         />
     </main>
 </Layout>

@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 // use this colors only if necessary - use Theme for colors
 export const Colors = {
     primary: "#FFFFFF",
-    secondary: "#19212d",
+    secondary: "#131923",
     tertiary: "#2872d1",
 };
 

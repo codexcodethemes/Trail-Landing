@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
+import type { ButtonProps } from ".";
 
 export const ButtonWrapper = styled.div<{
     $align?: "left" | "center" | "right";
@@ -9,7 +10,7 @@ export const ButtonWrapper = styled.div<{
 `;
 
 export const ButtonLink = styled.a<{
-    $variant: "primary" | "secondary";
+    $variant: ButtonProps["variant"];
 }>`
     /**
         if needed make custom css for buttons

@@ -43,7 +43,11 @@ type IconName = {
  * <Icon iconData="home" alt="home" />
  * for change color of icon use css filter
  */
-export const Icon: FC<IconName> = ({ alt, iconData, ...rest }) => {
+export const Icon: FC<React.ButtonHTMLAttributes<HTMLElement> & IconName> = ({
+    alt,
+    iconData,
+    ...rest
+}) => {
     const icon = icons[iconData];
 
     return (
