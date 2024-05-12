@@ -11,7 +11,7 @@ export const images = {
     dashboard: Dashboard,
 };
 
-export type ImageProps = {
+export type ImageProps = React.ImgHTMLAttributes<HTMLElement> & {
     srcLocal?: keyof typeof images;
     src?: string;
     alt: string;

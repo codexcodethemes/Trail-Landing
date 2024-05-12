@@ -2,6 +2,7 @@ import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 import CompressionPlugin from "vite-plugin-compression";
 import sitemap from "@astrojs/sitemap";
+import tailwind from "@astrojs/tailwind";
 
 export const siteUrl = "https://trial-landing-tailwind.netlify.app";
 
@@ -37,6 +38,9 @@ export default defineConfig({
                 // }
                 return item;
             },
+        }),
+        tailwind({
+            configFile: "./tailwind.config.js",
         }),
     ],
     renderers: ["@astrojs/renderer-react"],

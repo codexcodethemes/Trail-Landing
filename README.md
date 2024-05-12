@@ -1,65 +1,77 @@
 # 🚀 Trail Landing Page with Tailwind
 
-![Agency Aestro Template Page](/src/static/images/preview.webp)
+![Trail Landing Page with Tailwind](/src/static/images/preview.webp)
 [<img src="/src/static/images/link-live.png">](https://trial-landing-tailwind.netlify.app)
 [<img src="/src/static/images/link-contact.png">](https://www.codexcode.store/pages/contact)
 
+## 💻 Tech Stack
+
+Astro.build + React + Emotion + custom variables
+
+### ⚡️ Why like this?
+
+**Astro.build** is a modern front-end framework that allows you to build faster, optimized websites. It's compatible with React, which is a popular library for building user interfaces.
+
+**Tailwind** - Tailwind is great, this give us faster coding results that using only CSS-IN-JS, Its great, but like others tools, it have his own limits & thats why we use **Emotions**
+
+**Emotion** is a performant and flexible CSS-in-JS library, which lets you write CSS styles with JavaScript - This with Emotions allows us to create everything in minutes - reason why we using emotions with Tailwind is simple, when you have more "difficult" block to write, its better to split some code between **Emotions** & **Tailwind**
+
 ## ⚠️ How to keep good performance?
 
-If you make some changes (for example image) - make sure image is saved as .WEBP & its small! - avoid large images, because performance will drop!
-use https://tinypng.com/ to reduce you'r images
+If you make modifications, such as adding an image, ensure that the image is saved in .WEBP format and is of a small size. Avoid using large images as they can negatively impact performance. You can use [TinyPNG](https://tinypng.com/) to compress your images.
 
-## 🚀 Static Media
+## 🎨 Static Media
 
-Static media (not for single posts ect)
-There are 3 folders
-
--   fonts - setup there you'r all fonts - you don't want to get link to google - this can slow down you'r page, but if you needed, you can delete it and use google tags
+-   Fonts - setup there you'r all fonts - you don't want to get link to google - this can slow down you'r page, but if you needed, you can delete it and use google tags
 
 -   images - Images are setup with typescript, so this component is easy to use & when you import image there you don't need to worry about use import for every single image
 
--   icons - Right now we don't have solution to import SVGA files into React with Astro, so its working the same as Images
-
-#### 🖼️ Images
-
-Images can be stored in static/images and use it with srcLocal (typescript will give you types),
-also Image component can be display with "custom" link - use src instead of scrLocal:
-
 ```
+  @example
   <Image src="logo" alt="logo" width="50px" height="50px" />
 ```
 
-To register new image check the images object and add image there
+-   icons - In this version of template we dont apply solution for generate SVG files, but you can use SVG as img
 
-#### 🎨 Icons
-
-icons are stored in static/icons and use it with iconData (typescript will give you types)
+Icons are stored in static/icons and use it with iconData (typescript will give you types)
 
 ```
   <Icon iconData="home" alt="home" />
 ```
 
-Use those components for media to keep best performance or in astro files use images from astro - also good!
+next projects will have SVG output support! 
 
-# 💻 Sitemap & robots.tsx & SEO
+## 💻 Sitemap - robots - SEO ⚠️ IMPORTANT ⚠️
 
-## ⚠️ IMPORTANT ⚠️
+⚠️ **Search for** ⚠️ **siteUrl** & change website main link to load properly all preview images & ect
 
-1. Go to astro.config.mjs & change the ⚠️ siteURL ⚠️ replace url with you'r domain https
+also you can check if there is any CHANGEME or YOUR META DESCRIPTION FOR SEO - if yes, then you want to change it
 
-2. search for ⚠️ CHANGEME ⚠️ in files & replace all instances
+**Sitemap** is generated automatically from astro.config file.
 
-3. Seo: search for ⚠️ YOUR META DESCRIPTION FOR SEO ⚠️ and change this with your meta description of page - do the same for all you'r pages
+**Astro.config.mjs** There you can find example usage of sitemap, we add comments with if statements for various scenario, so check it & use it as you like!
 
-SITEMAP: Sitemap is created by astro, but you need yo configure it a little bit
+**Robots** - Also its generated automatically.
 
-1. Go to astro.config.mjs
-2. check how sitemap data is added (when you need more customization, check the commented lines)
+## 📞 Contact Form
 
-## 🚀 Styles
+If there is any form with **ZOD** & **API CALLS**
+
+For contact form you need to replace those **ID** with the correct one.
+API: https://emailjs.com
+Other solution: If you want to add other solution, then change axios request with other solution - should work
+
+```
+    service_id: "service_ID", -
+    template_id: "template_TEMPLATE_ID",
+    user_id: "USER_ID",
+```
+
+## 🎨 Styles
 
 All global styles like, colors, fonts, normalize or things like mediaQuery are stored in styles folder,
 
+With **Emotions** We create a MediaQuery function that allows us to create mobile styling easily.
 MediaQuery can be used with MIN & MAX OR BETWEEN - that means code will display depends on what we need to do:
 
 ```
@@ -83,19 +95,27 @@ MediaQuery can be used with MIN & MAX OR BETWEEN - that means code will display 
     }
 ```
 
-## 🚀 Theme colors
-
 All colors are used as css var to have easier access in app
+
+Rest code CSS is made with Emotions - read [Emotions docs](https://emotion.sh/docs/introduction) to understand how its working.
+
+Here we use Emotions with Tailwind, so you don't need to create css file for some extra styling, use Emotions for that!
 
 ## ⚠️ Tailwind
 
-This project is made with Tailwind - but you can use @emotions if you need css files
+Emotions should work with
 
-if you need to generate again file use this:
+```
+yarn dev or npm run dev
+```
+
+but if this for some reason don't work - use this
 
 ```
 npx tailwindcss -i ./src/styles/tailwind/tailwind.css -o ./src/styles/tailwind/tailwind.output.css --watch
 ```
+
+this will create instance in CMD and it will watch for all tailwind changes.
 
 ## 🧞 Commands
 
